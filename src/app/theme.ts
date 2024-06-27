@@ -9,9 +9,8 @@ import tokens from './tokens';
 const { color, palette } = tokens;
 
 const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
-  display: 'swap',
 });
 
 // Light/dark mode: https://mui.com/material-ui/customization/dark-mode/
@@ -19,7 +18,146 @@ const roboto = Roboto({
 // Light theme
 const theme = createTheme({
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    displayLg: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '57pt',
+      fontWeight: 400,
+      letterSpacing: '-0.25pt',
+      lineHeight: '64pt',
+    },
+    displayMd: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '45pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '52pt',
+    },
+    displaySm: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '36pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '44pt',
+    },
+    headlineLg: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '32pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '40pt',
+    },
+    headlineMd: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '28pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '36pt',
+    },
+    headlineSm: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '24pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '32pt',
+    },
+    titleLg: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '22pt',
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: '28pt',
+    },
+    titleMd: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '16pt',
+      fontWeight: 500,
+      letterSpacing: '0.15pt',
+      lineHeight: '24pt',
+    },
+    titleSm: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '14pt',
+      fontWeight: 500,
+      letterSpacing: '0.1pt',
+      lineHeight: '20pt',
+    },
+    bodyLg: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '16pt',
+      fontWeight: 400,
+      letterSpacing: '0.5pt',
+      lineHeight: '24pt',
+    },
+    bodyMd: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '14pt',
+      fontWeight: 400,
+      letterSpacing: '0.25pt',
+      lineHeight: '20pt',
+    },
+    bodySm: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '12pt',
+      fontWeight: 400,
+      letterSpacing: '0.4pt',
+      lineHeight: '16pt',
+    },
+    labelLg: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '14pt',
+      fontWeight: 500,
+      letterSpacing: '0.1pt',
+      lineHeight: '20pt',
+    },
+    labelLgBold: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '14pt',
+      fontWeight: 700,
+      letterSpacing: '0.1pt',
+      lineHeight: '20pt',
+    },
+    labelMd: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '12pt',
+      fontWeight: 500,
+      letterSpacing: '0.5pt',
+      lineHeight: '16pt',
+      textTransform: 'none',
+    },
+    labelMdBold: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '12pt',
+      fontWeight: 700,
+      letterSpacing: '0.5pt',
+      lineHeight: '16pt',
+      textTransform: 'none',
+    },
+    labelSm: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '11pt',
+      fontWeight: 500,
+      letterSpacing: '0.5pt',
+      lineHeight: '16pt',
+    },
+    h1: undefined,
+    h2: undefined,
+    h3: undefined,
+    h4: undefined,
+    h5: undefined,
+    h6: undefined,
+    subtitle1: undefined,
+    subtitle2: undefined,
+    body1: {
+      fontFamily: roboto.style.fontFamily,
+      fontSize: '14pt',
+      fontWeight: 400,
+      letterSpacing: '0.25pt',
+      lineHeight: '20pt',
+    },
+    body2: undefined,
+    button: undefined,
+    caption: undefined,
+    overline: undefined,
   },
   components: {
     MuiButton: {
@@ -128,6 +266,9 @@ const theme = createTheme({
         },
         notchedOutline: {
           borderColor: color.light.outline,
+        },
+        root: {
+          height: 56,
         },
       },
     },
