@@ -1,3 +1,5 @@
+import { Roboto } from 'next/font/google';
+
 const color = {
   light: {
     primary: '#37618E',
@@ -410,9 +412,137 @@ const palette = {
   },
 };
 
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
+
+const typography = {
+  displayLg: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '57pt',
+    fontWeight: 400,
+    letterSpacing: '-0.25pt',
+    lineHeight: '64pt',
+  },
+  displayMd: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '45pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '52pt',
+  },
+  displaySm: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '36pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '44pt',
+  },
+  headlineLg: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '32pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '40pt',
+  },
+  headlineMd: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '28pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '36pt',
+  },
+  headlineSm: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '24pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '32pt',
+  },
+  titleLg: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '22pt',
+    fontWeight: 400,
+    letterSpacing: 0,
+    lineHeight: '28pt',
+  },
+  titleMd: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '16pt',
+    fontWeight: 500,
+    letterSpacing: '0.15pt',
+    lineHeight: '24pt',
+  },
+  titleSm: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '14pt',
+    fontWeight: 500,
+    letterSpacing: '0.1pt',
+    lineHeight: '20pt',
+  },
+  bodyLg: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '16pt',
+    fontWeight: 400,
+    letterSpacing: '0.5pt',
+    lineHeight: '24pt',
+  },
+  bodyMd: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '14pt',
+    fontWeight: 400,
+    letterSpacing: '0.25pt',
+    lineHeight: '20pt',
+  },
+  bodySm: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '12pt',
+    fontWeight: 400,
+    letterSpacing: '0.4pt',
+    lineHeight: '16pt',
+  },
+  labelLg: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '14pt',
+    fontWeight: 500,
+    letterSpacing: '0.1pt',
+    lineHeight: '20pt',
+  },
+  labelLgBold: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '14pt',
+    fontWeight: 700,
+    letterSpacing: '0.1pt',
+    lineHeight: '20pt',
+  },
+  labelMd: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '12pt',
+    fontWeight: 500,
+    letterSpacing: '0.5pt',
+    lineHeight: '16pt',
+  },
+  labelMdBold: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '12pt',
+    fontWeight: 700,
+    letterSpacing: '0.5pt',
+    lineHeight: '16pt',
+  },
+  labelSm: {
+    fontFamily: roboto.style.fontFamily,
+    fontSize: '11pt',
+    fontWeight: 500,
+    letterSpacing: '0.5pt',
+    lineHeight: '16pt',
+  },
+};
+
 const tokens = {
   color,
   palette,
+  typography,
 };
 
 export default tokens;
