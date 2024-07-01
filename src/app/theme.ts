@@ -39,7 +39,7 @@ const theme = createTheme({
     subtitle2: undefined,
     body1: typography.bodyMd,
     body2: undefined,
-    button: undefined,
+    button: typography.labelLg,
     caption: undefined,
     overline: undefined,
   },
@@ -119,6 +119,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: color.light.onSurfaceVariant,
+          lineHeight: '24px',
         },
         shrink: {
           backgroundColor: color.light.surfaceContainerLow,
@@ -199,6 +200,13 @@ const theme = createTheme({
       styleOverrides: {
         icon: {
           color: color.light.onSurfaceVariant,
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: color.light.onSurface,
         },
       },
     },

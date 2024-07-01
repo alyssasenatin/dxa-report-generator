@@ -71,7 +71,6 @@ declare module '@mui/material/Typography' {
     subtitle1: false;
     subtitle2: false;
     body2: false;
-    button: false;
     caption: false;
     overline: false;
   }
