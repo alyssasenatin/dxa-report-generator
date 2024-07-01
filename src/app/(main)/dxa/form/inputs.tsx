@@ -11,7 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import styles from '../styles.module.css';
+import styles from './form.module.css';
 
 const { column } = styles;
 
