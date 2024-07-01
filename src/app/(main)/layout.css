@@ -11,6 +11,7 @@
   width: 100vw;
 }
 
+/* TODO: Remove padding depending on viewport */
 @media only screen and (max-width: 1199px) {
   .nav-rail {
     display: none;

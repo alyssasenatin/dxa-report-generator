@@ -3,7 +3,7 @@ import { Unstable_Grid2 as Grid, Typography } from '@mui/material';
 import './layout.css';
 
 const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => (
-  <Grid container flexDirection="row">
+  <Grid container flexDirection="row" flexWrap="nowrap">
     <div className="nav-rail">
       <Typography variant="body1">Navbar</Typography>
     </div>
