@@ -115,7 +115,7 @@ const theme = createTheme({
       },
     },
     MuiInputLabel: {
-      // TODO: Fix input label hover color
+      // TODO: Fix input label hover color, label in select
       styleOverrides: {
         root: {
           color: color.light.onSurfaceVariant,
