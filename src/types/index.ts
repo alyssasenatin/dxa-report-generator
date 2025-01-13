@@ -81,6 +81,7 @@ export enum UnitType {
   LENGTH = 'length',
   WEIGHT = 'weight',
   BMD = 'bmd',
+  PERCENT = 'percent',
 }
 
 export interface TestResult {

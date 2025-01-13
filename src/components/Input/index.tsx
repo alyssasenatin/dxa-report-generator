@@ -2,8 +2,6 @@ import { useFormContext } from 'react-hook-form';
 
 import { UnitType } from '../../types';
 
-import './styles.scss';
-
 const Input = ({
   type,
   label,
@@ -39,6 +37,7 @@ const Input = ({
         <span className="input-group-text">
           {unit === UnitType.LENGTH && 'cm'}
           {unit === UnitType.WEIGHT && 'kg'}
+          {unit === UnitType.PERCENT && '%'}
           {unit === UnitType.BMD && (
             <>
               g/cm <sup>2</sup>
