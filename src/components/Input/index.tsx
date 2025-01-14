@@ -5,12 +5,14 @@ import { UnitType } from '../../types';
 const Input = ({
   type,
   label,
+  name,
   value = '',
   unit,
   disabled = false,
 }: {
   type: string;
   label: string;
+  name: string;
   value?: string;
   unit?: UnitType;
   disabled?: boolean;
@@ -22,25 +24,30 @@ const Input = ({
       <div className="form-floating">
         <input
           className="form-control"
-          id={label}
+          id={name}
           type={type}
           placeholder={label}
           disabled={disabled}
-          {...(value ? register(label, { value }) : register(label))}
+          {...(value ? register(name, { value }) : register(name))}
           {...(type === 'date' && {
             max: new Date().toISOString().split('T')[0],
           })}
         />
-        <label htmlFor={label}>{label}</label>
+        <label htmlFor={name}>{label}</label>
       </div>
       {unit && (
         <span className="input-group-text">
-          {unit === UnitType.LENGTH && 'cm'}
+          {unit === UnitType.HEIGHT && 'cm'}
           {unit === UnitType.WEIGHT && 'kg'}
           {unit === UnitType.PERCENT && '%'}
           {unit === UnitType.BMD && (
             <>
               g/cm <sup>2</sup>
+            </>
+          )}
+          {unit === UnitType.BMI && (
+            <>
+              kg/m <sup>2</sup>
             </>
           )}
         </span>

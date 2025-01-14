@@ -1,36 +1,43 @@
 import { useFormContext } from 'react-hook-form';
 
 const Checkbox = ({
-  label,
+  label: formLabel,
+  name: formName,
   options,
 }: {
   label: string;
+  name: string;
   options: { label: string; value: string }[];
 }) => {
   const { register } = useFormContext();
 
-  const { name, onChange, onBlur, ref } = register(label);
+  const { name, onChange, onBlur, ref } = register(formLabel);
 
   return (
     <>
-      <span className="fw-bold me-4">{label}</span>
-      {...options.map(({ label, value }) => (
-        <div className="form-check form-check-inline">
-          <input
-            className="form-check-input"
-            id={`${label}-${value}`}
-            type="checkbox"
-            name={name}
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
-            ref={ref}
-          />
-          <label className="form-check-label" htmlFor={`${label}-${value}`}>
-            {label}
-          </label>
-        </div>
-      ))}
+      <span className="fw-bold mb-1 me-4">{formLabel}</span>
+      <div className="ps-2">
+        {...options.map(({ label, value }) => (
+          <div className="form-check form-check-inline">
+            <input
+              className="form-check-input"
+              id={`${formName}-${value}`}
+              type="checkbox"
+              name={name}
+              value={value}
+              onChange={onChange}
+              onBlur={onBlur}
+              ref={ref}
+            />
+            <label
+              className="form-check-label"
+              htmlFor={`${formName}-${value}`}
+            >
+              {label}
+            </label>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

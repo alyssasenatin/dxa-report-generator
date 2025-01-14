@@ -21,24 +21,68 @@ export enum FormField {
   BMI = 'bmi',
   BMI_CLASSIFICATION = 'bmiClassification',
   BONE_MINERAL = 'boneMineral',
-  DATE_PREVIOUS_STUDY = 'Date of previous study',
+  DATE_PREVIOUS_STUDY = 'dateOfPreviousStudy',
   FAT = 'fat',
+  FOLLOW_UP_STUDY = 'followUpStudy',
   FOREARM_SITE = 'forearmSite',
   HEIGHT = 'height',
+  HIP_FRACTURE_RISK = 'hipFractureRisk',
   INTERPRETATION = 'interpretation',
   LEAN = 'lean',
   LEFT_SITE = 'leftSite',
   LUMBAR_SITE = 'lumbarSite',
-  MENOPAUSAL_STATUS = 'Menopausal status',
+  MAJOR_BONE_FACTURE_RISK = 'majorBoneFractureRisk',
+  MENOPAUSAL_STATUS = 'menopausalStatus',
   RACE = 'race',
-  REPORT_TYPE = 'Report Type',
+  RECOMMENDATION = 'recommendation',
+  REPORT_TYPE = 'reportType',
   RIGHT_SITE = 'rightSite',
+  RISK_FACTORS = 'riskFactors',
   SEX = 'sex',
   SHOW_Z_SCORES = 'showZScores',
   TOTAL_BODY_MASS = 'totalBodyMass',
   WEIGHT = 'weight',
   YOUNG_ADULT_PERCENT = 'youngAdultPercent',
   YOUNG_ADULT_T_SCORE = 'youngAdultTScore',
+}
+
+export enum FormLabel {
+  AGE = 'Age',
+  ASSESSMENT = 'Assessment',
+  BMD = 'BMD',
+  BMI = 'BMI',
+  BMI_CLASSIFICATION = 'Classification',
+  BONE_MINERAL = 'Bone mineral',
+  DATE_PREVIOUS_STUDY = 'Date of previous study',
+  FAT = 'Fat',
+  FOLLOW_UP_STUDY = 'Follow-up study',
+  FOREARM_SITE = 'Forearm (33% radius)',
+  HEIGHT = 'Height',
+  HIP_FRACTURE_RISK = '10-year risk for hip fracture',
+  INTERPRETATION = 'Interpretation',
+  LEAN = 'Lean',
+  LEFT_SITE = 'Left',
+  LUMBAR_SITE = 'Lumbar',
+  MAJOR_BONE_FACTURE_RISK = '10-year risk for major bone fracture',
+  MENOPAUSAL_STATUS = 'Menopausal status',
+  PERCENT = '%',
+  RACE = 'Race',
+  RECOMMENDATION = 'Recommendation',
+  REPORT_TYPE = 'Report Type',
+  RIGHT_SITE = 'Right',
+  RISK_FACTORS = 'Risk factors',
+  SEX = 'Sex',
+  T_SCORE = 'T-score',
+  TOTAL_BODY_MASS = 'Total body mass',
+  WEIGHT = 'Weight',
+  Z_SCORE = 'Z-score',
+}
+
+export enum LumbarSite {
+  L1 = 'L1',
+  L2 = 'L2',
+  L3 = 'L3',
+  L4 = 'L4',
 }
 
 export enum MenopausalStatus {
@@ -48,10 +92,10 @@ export enum MenopausalStatus {
 }
 
 export enum Race {
-  ASIAN = 'asian',
-  HISPANIC = 'hispanic',
-  WHITE = 'white',
-  OTHERS = 'others',
+  ASIAN = 'Asian',
+  HISPANIC = 'Hispanic',
+  WHITE = 'White',
+  OTHERS = 'Others',
 }
 
 export enum ReportType {
@@ -68,20 +112,26 @@ export enum ResultType {
 }
 
 export enum LeftRightSite {
-  FEMORAL_NECK = 'femoralNeck',
-  TOTAL_HIP = 'totalHip',
+  FEMORAL_NECK = 'femoral neck',
+  TOTAL_HIP = 'total hip',
 }
 
 export enum Sex {
-  MALE = 'male',
-  FEMALE = 'female',
+  MALE = 'Male',
+  FEMALE = 'Female',
+}
+
+export enum ShowZScores {
+  SHOW_T_SCORES = 'Show T-scores only',
+  SHOW_BOTH_T_Z_SCORES = 'Show both T-scores and Z-scores',
 }
 
 export enum UnitType {
-  LENGTH = 'length',
+  HEIGHT = 'height',
   WEIGHT = 'weight',
   BMD = 'bmd',
   PERCENT = 'percent',
+  BMI = 'bmi',
 }
 
 export interface TestResult {
