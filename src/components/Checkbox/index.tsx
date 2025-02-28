@@ -11,7 +11,7 @@ const Checkbox = ({
 }) => {
   const { register } = useFormContext();
 
-  const { name, onChange, onBlur, ref } = register(formLabel);
+  const { name, onChange, onBlur, ref } = register(formName);
 
   return (
     <>

@@ -4,22 +4,18 @@ const Radio = ({
   label: formLabel,
   name: formName,
   options,
-  defaultValue = '',
   inline = false,
   hideLabel = false,
 }: {
   label: string;
   name: string;
   options: { label: string; value: string }[];
-  defaultValue?: string;
   inline?: boolean;
   hideLabel?: boolean;
 }) => {
   const { register } = useFormContext();
 
-  const { name, onChange, onBlur, ref } = register(formName, {
-    value: defaultValue,
-  });
+  const { name, onChange, onBlur, ref } = register(formName);
 
   return (
     <>

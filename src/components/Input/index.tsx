@@ -6,14 +6,12 @@ const Input = ({
   type,
   label,
   name,
-  value = '',
   unit,
   disabled = false,
 }: {
   type: string;
   label: string;
   name: string;
-  value?: string;
   unit?: UnitType;
   disabled?: boolean;
 }) => {
@@ -28,7 +26,7 @@ const Input = ({
           type={type}
           placeholder={label}
           disabled={disabled}
-          {...(value ? register(name, { value }) : register(name))}
+          {...register(name)}
           {...(type === 'date' && {
             max: new Date().toISOString().split('T')[0],
           })}

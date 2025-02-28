@@ -78,6 +78,11 @@ export enum FormLabel {
   Z_SCORE = 'Z-score',
 }
 
+export enum LeftRightSite {
+  FEMORAL_NECK = 'femoral neck',
+  TOTAL_HIP = 'total hip',
+}
+
 export enum LumbarSite {
   L1 = 'L1',
   L2 = 'L2',
@@ -109,11 +114,6 @@ export enum ResultType {
   LEFT = 'left',
   FOREARM = 'forearm',
   TOTAL_BODY = 'totalBody',
-}
-
-export enum LeftRightSite {
-  FEMORAL_NECK = 'femoral neck',
-  TOTAL_HIP = 'total hip',
 }
 
 export enum Sex {
@@ -163,16 +163,27 @@ export interface DxaReportFormInputs {
   assessment: string;
   bmi: number;
   bmiClassification: BmiClassification;
-  height: number;
-  interpretation: string;
+  boneMineral: number;
+  dateOfPreviousStudy: string;
+  fat: number;
+  followUpStudy: string;
   forearm: ForearmTestResult;
+  height: number;
+  hipFractureRisk: number;
+  interpretation: string;
+  lean: number;
   left: LeftTestResult;
   lumbar: LumbarTestResult;
+  majorBoneFractureRisk: number;
   menopausalStatus: MenopausalStatus;
+  race: Race;
+  recommendation: string;
   reportType: ReportType;
   right: RightTestResult;
+  riskFactors: string;
   sex: Sex;
-  showZScores: boolean;
+  showZScores: ShowZScores;
   totalBody: TestResult;
+  totalBodyMass: number;
   weight: number;
 }
