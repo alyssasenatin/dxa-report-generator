@@ -435,6 +435,8 @@ export const getRecommendation = (
     totalBodyTScore
   );
 
+  if (isNaN(lowestTScore)) return '';
+
   if (lowestTScore >= -1) {
     return `\
 Optimize dietary/supplementary calcium and vitamin D3, if there are no contraindications. \
@@ -488,6 +490,8 @@ export const getFollowUpStudy = (
     rightTScore,
     totalBodyTScore
   );
+
+  if (isNaN(lowestTScore)) return '';
 
   const duration =
     lowestTScore >= -1
