@@ -41,13 +41,23 @@ const App = () => {
   return (
     <>
       <h1 className="text-center my-4">DXA Report Generator</h1>
-      <main className="container bg-light rounded p-3">
+      {/* <main className="container bg-light rounded p-3">
         <div className="row">
           <div className="col-12 col-lg-6">
             <DxaReportForm methods={methods} />
           </div>
           <div className="col-12 col-lg-6">
             <DxaReportPreview methods={methods} />
+          </div>
+        </div>
+      </main> */}
+      <main className="container d-flex justify-content-center">
+        <div className="row bg-light rounded mb-4 mx-3 px-3 py-4">
+          <div className="col-12">
+            <DxaReportForm methods={methods} />
+            <div className="float-end">
+              <DxaReportPreview methods={methods} />
+            </div>
           </div>
         </div>
       </main>
