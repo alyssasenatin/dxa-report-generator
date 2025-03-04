@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 
-import DxaReportForm from './components/DxaReportForm';
 import {
   DxaReportFormInputs,
   ForearmSite,
@@ -13,6 +12,9 @@ import {
   Sex,
   ShowZScores,
 } from './types';
+
+import DxaReportForm from './components/DxaReportForm';
+import DxaReportPreview from './components/DxaReportPreview';
 
 const App = () => {
   const methods = useForm<DxaReportFormInputs>({
@@ -44,7 +46,9 @@ const App = () => {
           <div className="col-12 col-lg-6">
             <DxaReportForm methods={methods} />
           </div>
-          <div className="col-12 col-lg-6">Preview</div>
+          <div className="col-12 col-lg-6">
+            <DxaReportPreview methods={methods} />
+          </div>
         </div>
       </main>
     </>
