@@ -59,7 +59,6 @@ const DxaReportForm = ({
     ageMatchedPercent: forearmZPercent,
     ageMatchedZScore: forearmZScore,
     bmd: forearmBmd,
-    forearmSite,
     youngAdultPercent: forearmTPercent,
     youngAdultTScore: forearmTScore,
   } = forearm;
@@ -106,6 +105,13 @@ const DxaReportForm = ({
     setValue(FormField.BMI, bmi);
     setValue(FormField.BMI_CLASSIFICATION, bmiClassification);
   }, [height, weight, setValue]);
+
+  // Set Right Site
+  useEffect(() => {
+    if (leftSite !== rightSite) {
+      setValue(`${ResultType.LEFT}.${FormField.LEFT_SITE}`, rightSite);
+    }
+  }, [left, leftSite, right, rightSite, setValue]);
 
   // Set Interpretation
   useEffect(() => {
@@ -472,6 +478,7 @@ const DxaReportForm = ({
               label: value,
               value,
             }))}
+            disabled
             inline
           />
         </div>
