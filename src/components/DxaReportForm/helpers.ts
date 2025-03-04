@@ -11,17 +11,12 @@ import {
   ShowZScores,
 } from '../../types';
 
-const getBmdResult = (lowestTScore: number) => {
-  if (lowestTScore <= -2.5) {
-    return 'osteoporosis';
-  }
-
-  if (lowestTScore >= -1.0) {
-    return 'normal BMD';
-  }
-
-  return 'osteopenia';
-};
+export const getBmdResult = (lowestTScore: number) =>
+  lowestTScore <= -2.5
+    ? 'osteoporosis'
+    : lowestTScore >= -1.0
+      ? 'normal BMD'
+      : 'osteopenia';
 
 export const getAssessment = (
   age: number,
@@ -144,21 +139,18 @@ export const getBmi = (height: number, weight: number) => {
 export const getInterpretationNoZScore = (
   {
     ageMatchedPercent: forearmZPercent,
-    ageMatchedZScore: forearmZScore,
     bmd: forearmBmd,
     youngAdultPercent: forearmTPercent,
     youngAdultTScore: forearmTScore,
   }: ForearmTestResult,
   {
     ageMatchedPercent: leftZPercent,
-    ageMatchedZScore: leftZScore,
     bmd: leftBmd,
     youngAdultPercent: leftTPercent,
     youngAdultTScore: leftTScore,
   }: LeftTestResult,
   {
     ageMatchedPercent: lumbarZPercent,
-    ageMatchedZScore: lumbarZScore,
     bmd: lumbarBmd,
     lumbarSite,
     youngAdultPercent: lumbarTPercent,
@@ -166,7 +158,6 @@ export const getInterpretationNoZScore = (
   }: LumbarTestResult,
   {
     ageMatchedPercent: rightZPercent,
-    ageMatchedZScore: rightZScore,
     bmd: rightBmd,
     rightSite,
     youngAdultPercent: rightTPercent,
@@ -174,48 +165,13 @@ export const getInterpretationNoZScore = (
   }: RightTestResult,
   {
     ageMatchedPercent: totalBodyZPercent,
-    ageMatchedZScore: totalBodyZScore,
     bmd: totalBodyBmd,
     youngAdultPercent: totalBodyTPercent,
     youngAdultTScore: totalBodyTScore,
   }: TestResult
-) => {
-  const hasLumbarResults =
-    lumbarBmd &&
-    lumbarZPercent &&
-    lumbarZScore &&
-    lumbarTPercent &&
-    lumbarZScore &&
-    lumbarSite.length > 0;
-
-  const hasLeftAndRightResults =
-    leftBmd &&
-    leftZPercent &&
-    leftZScore &&
-    leftTPercent &&
-    leftZScore &&
-    rightBmd &&
-    rightZPercent &&
-    rightZScore &&
-    rightTPercent &&
-    rightZScore;
-
-  const hasForearmResults =
-    forearmBmd &&
-    forearmZPercent &&
-    forearmZScore &&
-    forearmTPercent &&
-    forearmZScore;
-
-  const hasTotalBodyResults =
-    totalBodyBmd &&
-    totalBodyZPercent &&
-    totalBodyZScore &&
-    totalBodyTPercent &&
-    totalBodyZScore;
-
-  return `${
-    hasLumbarResults
+) =>
+  `${
+    lumbarBmd
       ? `The most representative BMD of the lumbar spine comes from \
 ${lumbarSite.length === 4 ? 'L1 - L4' : lumbarSite.map((site) => `${site}`).join(', ')}\
 . This total BMD value of ${lumbarBmd} g/cm2 \
@@ -225,7 +181,7 @@ and ${lumbarZPercent == 100 ? 'not' : `${100 - lumbarZPercent} %`} diminished wh
 `
       : ''
   }${
-    hasLeftAndRightResults
+    leftBmd && rightBmd
       ? `
 The right and left ${rightSite === LeftRightSite.FEMORAL_NECK ? 'femoral neck' : 'total hip'} \
 BMDs of ${rightBmd} g/cm2 and ${leftBmd} g/cm2 (T-scores: ${rightTScore} right, ${leftTScore} left\
@@ -237,9 +193,9 @@ diminished when compared to adults of similar age, weight, and race (age-matched
 `
       : ''
   }${
-    hasTotalBodyResults
+    totalBodyBmd
       ? `${
-          hasForearmResults
+          forearmBmd
             ? `
 The nondominant forearm 33 % radius and total body BMDs of ${forearmBmd} g/cm2 and ${totalBodyBmd} g/cm2 \
 (T-scores: ${forearmTScore}, ${totalBodyTScore}) \
@@ -248,7 +204,7 @@ and ${forearmZPercent == 100 && totalBodyZPercent == 100 ? 'not' : `${100 - fore
             : ''
         }`
       : `${
-          hasForearmResults
+          forearmBmd
             ? `
 The nondominant forearm 33 % radius BMD of ${forearmBmd} g/cm2 (T-score: ${forearmTScore}\
 ) is ${forearmTPercent == 100 ? 'not' : `${100 - forearmTPercent} %`} below the young adult mean BMD and \
@@ -256,7 +212,6 @@ ${forearmZPercent == 100 ? 'not' : `${100 - forearmZPercent} %`} diminished when
             : ''
         }`
   }`.trim();
-};
 
 export const getInterpretationWithZScore = (
   {
@@ -296,43 +251,9 @@ export const getInterpretationWithZScore = (
     youngAdultPercent: totalBodyTPercent,
     youngAdultTScore: totalBodyTScore,
   }: TestResult
-) => {
-  const hasLumbarResults =
+) =>
+  `${
     lumbarBmd &&
-    lumbarZPercent &&
-    lumbarZScore &&
-    lumbarTPercent &&
-    lumbarZScore &&
-    lumbarSite.length > 0;
-
-  const hasLeftAndRightResults =
-    leftBmd &&
-    leftZPercent &&
-    leftZScore &&
-    leftTPercent &&
-    leftZScore &&
-    rightBmd &&
-    rightZPercent &&
-    rightZScore &&
-    rightTPercent &&
-    rightZScore;
-
-  const hasForearmResults =
-    forearmBmd &&
-    forearmZPercent &&
-    forearmZScore &&
-    forearmTPercent &&
-    forearmZScore;
-
-  const hasTotalBodyResults =
-    totalBodyBmd &&
-    totalBodyZPercent &&
-    totalBodyZScore &&
-    totalBodyTPercent &&
-    totalBodyZScore;
-
-  return `${
-    hasLumbarResults &&
     `The most representative BMD of the lumbar spine comes from \
 ${lumbarSite.length === 4 ? 'L1 - L4' : lumbarSite.map((site) => `${site}`).join(', ')}\
 . This total BMD value of ${lumbarBmd} g/cm2 \
@@ -341,7 +262,8 @@ indicates ${lumbarTPercent == 100 ? 'no' : `a ${100 - lumbarTPercent} %`} diminu
 and ${lumbarZPercent == 100 ? 'not' : `${100 - lumbarZPercent} %`} diminished when compared to adults of similar age, weight, and race (age-matched).
 `
   }${
-    hasLeftAndRightResults &&
+    leftBmd &&
+    rightBmd &&
     `
 The right and left ${rightSite === LeftRightSite.FEMORAL_NECK ? 'femoral neck' : 'total hip'} \
 BMDs of ${rightBmd} g/cm2 and ${leftBmd} g/cm2 (T-scores: ${rightTScore} right, ${leftTScore} left \
@@ -352,9 +274,9 @@ ${rightZPercent == 100 && leftZPercent == 100 ? 'not' : `${100 - rightZPercent} 
 diminished when compared to adults of similar age, weight, and race (age-matched).
 `
   }${
-    hasTotalBodyResults
+    totalBodyBmd
       ? `${
-          hasForearmResults &&
+          forearmBmd &&
           `
 The nondominant forearm 33 % radius and total body BMDs of ${forearmBmd} g/cm2 and ${totalBodyBmd} g/cm2 \
 (T-scores: ${forearmTScore}, ${totalBodyTScore} and Z-scores: ${forearmZScore}, ${totalBodyZScore}) \
@@ -362,14 +284,13 @@ respectively are ${forearmTPercent == 100 && totalBodyTPercent == 100 ? 'not' : 
 and ${forearmZPercent == 100 && totalBodyZPercent == 100 ? 'not' : `${100 - forearmZPercent} % and ${100 - totalBodyZPercent} %`} diminished when compared to adults of similar age, weight, and race (age-matched).`
         }`
       : `${
-          hasForearmResults &&
+          forearmBmd &&
           `
 The nondominant forearm 33 % radius BMD of ${forearmBmd} g/cm2 (T-score: ${forearmTScore} \
 and Z-score: ${forearmZScore}) is ${forearmTPercent == 100 ? 'not' : `${100 - forearmTPercent} %`} below the young adult mean BMD and \
 ${forearmZPercent == 100 ? 'not' : `${100 - forearmZPercent} %`} diminished when compared to adults of similar age, weight, and race (age-matched).`
         }`
   }`.trim();
-};
 
 export const getInterpretation = (
   forearm: ForearmTestResult,
