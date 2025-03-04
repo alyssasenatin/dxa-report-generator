@@ -8,8 +8,54 @@ const DxaReportPreview = ({
 }: {
   methods: UseFormReturn<DxaReportFormInputs>;
 }) => {
+  const { watch } = methods;
+
+  const {
+    age,
+    bmi,
+    bmiClassification,
+    boneMineral,
+    dateOfPreviousStudy,
+    fat,
+    forearm,
+    hipFractureRisk,
+    lean,
+    left,
+    lumbar,
+    majorBoneFractureRisk,
+    menopausalStatus,
+    race,
+    reportType,
+    right,
+    sex,
+    showZScores,
+    totalBody,
+    totalBodyMass,
+  } = watch();
+
   const handleButtonClick = () => {
-    generateDocxFile();
+    generateDocxFile(
+      age,
+      bmi,
+      bmiClassification,
+      boneMineral,
+      dateOfPreviousStudy,
+      fat,
+      forearm,
+      hipFractureRisk,
+      lean,
+      left,
+      lumbar,
+      majorBoneFractureRisk,
+      menopausalStatus,
+      race,
+      reportType,
+      right,
+      sex,
+      showZScores,
+      totalBody,
+      totalBodyMass
+    );
   };
 
   return (
