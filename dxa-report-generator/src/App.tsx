@@ -1,33 +1,66 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/electron-vite.animate.svg';
-import './App.css';
+import { useForm } from 'react-hook-form';
+
+import {
+  DxaReportFormInputs,
+  ForearmSite,
+  FormField,
+  LeftRightSite,
+  MenopausalStatus,
+  Race,
+  ReportType,
+  ResultType,
+  Sex,
+  ShowZScores,
+} from './types';
+
+import DxaReportForm from './components/DxaReportForm';
+import DxaReportPreview from './components/DxaReportPreview';
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const methods = useForm<DxaReportFormInputs>({
+    defaultValues: {
+      [FormField.REPORT_TYPE]: ReportType.BASELINE,
+      [FormField.MENOPAUSAL_STATUS]: MenopausalStatus.PRE_MENOPAUSAL,
+      [FormField.SEX]: Sex.MALE,
+      [FormField.RACE]: Race.ASIAN,
+      [ResultType.LUMBAR]: {},
+      [ResultType.RIGHT]: {
+        [FormField.RIGHT_SITE]: LeftRightSite.FEMORAL_NECK,
+      },
+      [ResultType.LEFT]: {
+        [FormField.LEFT_SITE]: LeftRightSite.FEMORAL_NECK,
+      },
+      [ResultType.FOREARM]: {
+        [FormField.FOREARM_SITE]: ForearmSite.LEFT,
+      },
+      [ResultType.TOTAL_BODY]: {},
+      [FormField.SHOW_Z_SCORES]: ShowZScores.SHOW_T_SCORES,
+    } as DxaReportFormInputs,
+  });
 
   return (
     <>
-      <div>
-        <a href="https://electron-vite.github.io" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className="text-center my-4">DXA Report Generator</h1>
+      {/* <main className="container bg-light rounded p-3">
+        <div className="row">
+          <div className="col-12 col-lg-6">
+            <DxaReportForm methods={methods} />
+          </div>
+          <div className="col-12 col-lg-6">
+            <DxaReportPreview methods={methods} />
+          </div>
+        </div>
+      </main> */}
+      <main className="container d-flex justify-content-center">
+        <div className="row bg-light rounded mb-4 mx-3 px-3 py-4">
+          <div className="col-12">
+            <DxaReportForm methods={methods} />
+            <div className="float-end">
+              <DxaReportPreview methods={methods} />
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   );
 };
