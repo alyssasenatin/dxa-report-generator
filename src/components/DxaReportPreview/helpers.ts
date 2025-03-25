@@ -2066,6 +2066,28 @@ const closing = [
     ],
     alignment: AlignmentType.JUSTIFIED,
   }),
+  blank,
+  new Paragraph({
+    children: [
+      new TextRun({
+        text: 'Dominic Z. Alcantara, MD, MBA',
+        bold: true,
+        italics: true,
+        size: '10pt',
+      }),
+    ],
+    alignment: AlignmentType.JUSTIFIED,
+  }),
+  new Paragraph({
+    children: [
+      new TextRun({
+        text: 'Nuclear Medicine Resident',
+        italics: true,
+        size: '10pt',
+      }),
+    ],
+    alignment: AlignmentType.JUSTIFIED,
+  }),
 ];
 
 const createDocument = (
