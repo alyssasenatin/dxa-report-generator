@@ -6,12 +6,14 @@ const Input = ({
   type,
   label,
   name,
+  step,
   unit,
   disabled = false,
 }: {
   type: string;
   label: string;
   name: string;
+  step?: string;
   unit?: UnitType;
   disabled?: boolean;
 }) => {
@@ -26,10 +28,23 @@ const Input = ({
           type={type}
           placeholder={label}
           disabled={disabled}
-          {...register(name)}
+          {...register(name, {
+            ...(type === 'number' && {
+              setValueAs: (value: string) =>
+                value
+                  ? parseFloat(value).toFixed(
+                      step === '0.001' ? 3 : step === '0.1' ? 1 : 0
+                    )
+                  : value,
+            }),
+          })}
           {...(type === 'date' && {
             max: new Date().toISOString().split('T')[0],
           })}
+          {...(type === 'number' &&
+            step && {
+              step,
+            })}
         />
         <label htmlFor={name}>{label}</label>
       </div>

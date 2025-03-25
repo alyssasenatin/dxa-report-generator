@@ -279,12 +279,7 @@ const lumbarSiteResult = ({
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(bmd.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(bmd.toString(), true)],
               width: {
                 size: convertInchesToTwip(1.13),
                 type: WidthType.DXA,
@@ -292,10 +287,7 @@ const lumbarSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultTScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultTScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -304,10 +296,7 @@ const lumbarSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -316,10 +305,7 @@ const lumbarSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedZScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedZScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -328,10 +314,7 @@ const lumbarSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -388,60 +371,35 @@ const rightAndLeftSiteResult = (
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(rightBmd.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(rightBmd.toString(), true)],
               width: {
                 size: convertInchesToTwip(1.13),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(rightTScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(rightTScore.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(rightTPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(rightTPercent.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(rightZScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(rightZScore.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(rightZPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(rightZPercent.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
@@ -474,60 +432,35 @@ const rightAndLeftSiteResult = (
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(leftBmd.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(leftBmd.toString(), true)],
               width: {
                 size: convertInchesToTwip(1.13),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(leftTScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(leftTScore.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(leftTPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(leftTPercent.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(leftZScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(leftZScore.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(leftZPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(leftZPercent.toString(), true)],
               width: {
                 size: convertInchesToTwip(1),
                 type: WidthType.DXA,
@@ -573,12 +506,7 @@ const forearmSiteResult = ({
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(bmd.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(bmd.toString(), true)],
               width: {
                 size: convertInchesToTwip(1.13),
                 type: WidthType.DXA,
@@ -586,10 +514,7 @@ const forearmSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultTScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultTScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -598,10 +523,7 @@ const forearmSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -610,10 +532,7 @@ const forearmSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedZScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedZScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -622,10 +541,7 @@ const forearmSiteResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -656,12 +572,7 @@ const totalBodyResult = ({
               },
             }),
             new TableCell({
-              children: [
-                testResultTableCell(
-                  parseFloat(bmd.toString()).toFixed(1) ?? '',
-                  true
-                ),
-              ],
+              children: [testResultTableCell(bmd.toString(), true)],
               width: {
                 size: convertInchesToTwip(1.13),
                 type: WidthType.DXA,
@@ -669,10 +580,7 @@ const totalBodyResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultTScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultTScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -681,10 +589,7 @@ const totalBodyResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(youngAdultPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(youngAdultPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -693,10 +598,7 @@ const totalBodyResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedZScore.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedZScore.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -705,10 +607,7 @@ const totalBodyResult = ({
             }),
             new TableCell({
               children: [
-                testResultTableCell(
-                  parseFloat(ageMatchedPercent.toString()).toFixed(1) ?? '',
-                  true
-                ),
+                testResultTableCell(ageMatchedPercent.toString(), true),
               ],
               width: {
                 size: convertInchesToTwip(1),
@@ -781,7 +680,7 @@ const totalBodyComposition = (
               text: 'BMI: ',
             }),
             new TextRun({
-              text: bmi.toFixed(1),
+              text: bmi.toString(),
             }),
             new TextRun({
               text: ' kg/m',
@@ -800,7 +699,7 @@ const totalBodyComposition = (
               text: '), Total body mass based from DXA = ',
             }),
             new TextRun({
-              text: parseFloat(totalBodyMass.toString()).toFixed(1),
+              text: totalBodyMass.toString(),
             }),
             new TextRun({
               text: ' kg',
@@ -816,7 +715,7 @@ const totalBodyComposition = (
               text: 'Whole body composition as follows: Fat = ',
             }),
             new TextRun({
-              text: parseFloat(fat.toString()).toFixed(1),
+              text: fat.toString(),
             }),
             new TextRun({
               text: ' kg (',
@@ -828,7 +727,7 @@ const totalBodyComposition = (
               text: ' %); Lean = ',
             }),
             new TextRun({
-              text: parseFloat(lean.toString()).toFixed(1),
+              text: lean.toString(),
             }),
             new TextRun({
               text: ' kg (',
@@ -840,13 +739,13 @@ const totalBodyComposition = (
               text: ' %); Bone Mineral = ',
             }),
             new TextRun({
-              text: parseFloat(boneMineral.toString()).toFixed(1),
+              text: boneMineral.toString(),
             }),
             new TextRun({
               text: ' kg (',
             }),
             new TextRun({
-              text: ((boneMineral / totalBodyMass) * 100).toFixed(1), // Input
+              text: ((boneMineral / totalBodyMass) * 100).toFixed(1),
             }),
             new TextRun({
               text: ' %)',
@@ -1126,7 +1025,7 @@ const interpretation = (
               text: '. This total BMD value of ',
             }),
             new TextRun({
-              text: parseFloat(lumbarBmd.toString()).toFixed(1),
+              text: lumbarBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1139,7 +1038,7 @@ const interpretation = (
               text: ' (T-score: ',
             }),
             new TextRun({
-              text: parseFloat(lumbarTScore.toString()).toFixed(1),
+              text: lumbarTScore.toString(),
             }),
             ...(showZScores === ShowZScores.SHOW_BOTH_T_Z_SCORES
               ? [
@@ -1147,7 +1046,7 @@ const interpretation = (
                     text: ' and Z-score: ',
                   }),
                   new TextRun({
-                    text: parseFloat(lumbarZScore.toString()).toFixed(1),
+                    text: lumbarZScore.toString(),
                   }),
                 ]
               : []),
@@ -1160,9 +1059,7 @@ const interpretation = (
                     text: 'a ',
                   }),
                   new TextRun({
-                    text: parseFloat((100 - lumbarTPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - lumbarTPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1179,9 +1076,7 @@ const interpretation = (
             ...(100 - lumbarZPercent > 0
               ? [
                   new TextRun({
-                    text: parseFloat((100 - lumbarZPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - lumbarZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1216,7 +1111,7 @@ const interpretation = (
               text: ' BMDs of ',
             }),
             new TextRun({
-              text: parseFloat(rightBmd.toString()).toFixed(1),
+              text: rightBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1229,7 +1124,7 @@ const interpretation = (
               text: ' and ',
             }),
             new TextRun({
-              text: parseFloat(leftBmd.toString()).toFixed(1),
+              text: leftBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1242,13 +1137,13 @@ const interpretation = (
               text: ' (T-scores: ',
             }),
             new TextRun({
-              text: parseFloat(rightTScore.toString()).toFixed(1),
+              text: rightTScore.toString(),
             }),
             new TextRun({
               text: ' right, ',
             }),
             new TextRun({
-              text: parseFloat(leftTScore.toString()).toFixed(1),
+              text: leftTScore.toString(),
             }),
             new TextRun({
               text: ' left',
@@ -1259,13 +1154,13 @@ const interpretation = (
                     text: ' and Z-scores: ',
                   }),
                   new TextRun({
-                    text: parseFloat(rightZScore.toString()).toFixed(1),
+                    text: rightZScore.toString(),
                   }),
                   new TextRun({
                     text: ' right, ',
                   }),
                   new TextRun({
-                    text: parseFloat(leftZScore.toString()).toFixed(1),
+                    text: leftZScore.toString(),
                   }),
                   new TextRun({
                     text: ' left',
@@ -1278,17 +1173,13 @@ const interpretation = (
             ...(100 - rightTPercent > 0 || 100 - leftTPercent > 0
               ? [
                   new TextRun({
-                    text: parseFloat((100 - rightTPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - rightTPercent).toString(),
                   }),
                   new TextRun({
                     text: ' % and ',
                   }),
                   new TextRun({
-                    text: parseFloat((100 - leftTPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - leftTPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1305,17 +1196,13 @@ const interpretation = (
             ...(100 - rightZPercent > 0 || 100 - leftZPercent > 0
               ? [
                   new TextRun({
-                    text: parseFloat((100 - rightZPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - rightZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' % and ',
                   }),
                   new TextRun({
-                    text: parseFloat((100 - leftZPercent).toString()).toFixed(
-                      1
-                    ),
+                    text: (100 - leftZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1344,7 +1231,7 @@ const interpretation = (
               text: 'The nondominant forearm 33 % radius BMD of ',
             }),
             new TextRun({
-              text: parseFloat(forearmBmd.toString()).toFixed(1),
+              text: forearmBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1357,7 +1244,7 @@ const interpretation = (
               text: ' (T-score: ',
             }),
             new TextRun({
-              text: parseFloat(forearmTScore.toString()).toFixed(1),
+              text: forearmTScore.toString(),
             }),
             ...(showZScores === ShowZScores.SHOW_BOTH_T_Z_SCORES
               ? [
@@ -1365,7 +1252,7 @@ const interpretation = (
                     text: ' and Z-score: ',
                   }),
                   new TextRun({
-                    text: parseFloat(forearmZScore.toString()).toFixed(1),
+                    text: forearmZScore.toString(),
                   }),
                 ]
               : []),
@@ -1373,7 +1260,7 @@ const interpretation = (
               text: ') is ',
             }),
             new TextRun({
-              text: parseFloat((100 - forearmTPercent).toString()).toFixed(1),
+              text: (100 - forearmTPercent).toString(),
             }),
             new TextRun({
               text: ' % below the young adult mean BMD and ',
@@ -1381,9 +1268,7 @@ const interpretation = (
             ...(100 - forearmZPercent > 0
               ? [
                   new TextRun({
-                    text: parseFloat(
-                      (100 - forearmZPercent).toString()
-                    ).toFixed(1),
+                    text: (100 - forearmZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1412,7 +1297,7 @@ const interpretation = (
               text: 'The nondominant forearm 33 % radius and total body BMDs of ',
             }),
             new TextRun({
-              text: parseFloat(forearmBmd.toString()).toFixed(1),
+              text: forearmBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1425,7 +1310,7 @@ const interpretation = (
               text: ' and ',
             }),
             new TextRun({
-              text: parseFloat(totalBodyBmd.toString()).toFixed(1),
+              text: totalBodyBmd.toString(),
             }),
             new TextRun({
               text: ' g/cm',
@@ -1438,13 +1323,13 @@ const interpretation = (
               text: ' (T-scores: ',
             }),
             new TextRun({
-              text: parseFloat(forearmTScore.toString()).toFixed(1),
+              text: forearmTScore.toString(),
             }),
             new TextRun({
               text: ', ',
             }),
             new TextRun({
-              text: parseFloat(totalBodyTScore.toString()).toFixed(1),
+              text: totalBodyTScore.toString(),
             }),
             ...(showZScores === ShowZScores.SHOW_BOTH_T_Z_SCORES
               ? [
@@ -1452,13 +1337,13 @@ const interpretation = (
                     text: ' and Z-scores: ',
                   }),
                   new TextRun({
-                    text: parseFloat(forearmZScore.toString()).toFixed(1),
+                    text: forearmZScore.toString(),
                   }),
                   new TextRun({
                     text: ', ',
                   }),
                   new TextRun({
-                    text: parseFloat(totalBodyZScore.toString()).toFixed(1),
+                    text: totalBodyZScore.toString(),
                   }),
                 ]
               : []),
@@ -1466,13 +1351,13 @@ const interpretation = (
               text: ') respectively are ',
             }),
             new TextRun({
-              text: parseFloat((100 - forearmTPercent).toString()).toFixed(1),
+              text: (100 - forearmTPercent).toString(),
             }),
             new TextRun({
               text: ' % and ',
             }),
             new TextRun({
-              text: parseFloat((100 - totalBodyTPercent).toString()).toFixed(1),
+              text: (100 - totalBodyTPercent).toString(),
             }),
             new TextRun({
               text: ' % below the young adult mean BMD, and ',
@@ -1480,17 +1365,13 @@ const interpretation = (
             ...(100 - forearmZPercent > 0 || 100 - totalBodyZPercent > 0
               ? [
                   new TextRun({
-                    text: parseFloat(
-                      (100 - forearmZPercent).toString()
-                    ).toFixed(1),
+                    text: (100 - forearmZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' % and ',
                   }),
                   new TextRun({
-                    text: parseFloat(
-                      (100 - totalBodyZPercent).toString()
-                    ).toFixed(1),
+                    text: (100 - totalBodyZPercent).toString(),
                   }),
                   new TextRun({
                     text: ' %',
@@ -1645,6 +1526,7 @@ const assessment = (
             alignment: AlignmentType.JUSTIFIED,
           }),
         ]),
+    blank,
   ];
 };
 
@@ -1655,7 +1537,7 @@ const fracture = (hipFractureRisk: number, majorBoneFractureRisk: number) =>
         text: 'The 10-year probability of developing a hip fracture is ',
       }),
       new TextRun({
-        text: parseFloat(hipFractureRisk.toString()).toFixed(1),
+        text: hipFractureRisk.toString(),
         bold: true,
       }),
       new TextRun({
@@ -1666,7 +1548,7 @@ const fracture = (hipFractureRisk: number, majorBoneFractureRisk: number) =>
         text: ' while the 10-year probability of any major bone fracture (spine, forearm, hip or shoulder) is ',
       }),
       new TextRun({
-        text: parseFloat(majorBoneFractureRisk.toString()).toFixed(1),
+        text: majorBoneFractureRisk.toString(),
         bold: true,
       }),
       new TextRun({
@@ -2340,7 +2222,6 @@ const createDocument = (
             sex,
             totalBody
           ),
-          blank,
           fracture(hipFractureRisk, majorBoneFractureRisk),
           blank,
           ...fractureProbability(menopausalStatus, sex),

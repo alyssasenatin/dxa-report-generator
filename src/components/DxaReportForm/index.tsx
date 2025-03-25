@@ -325,6 +325,7 @@ const DxaReportForm = ({
             label={FormLabel.HEIGHT}
             name={FormField.HEIGHT}
             type="number"
+            step="0.1"
             unit={UnitType.HEIGHT}
           />
         </div>
@@ -333,6 +334,7 @@ const DxaReportForm = ({
             label={FormLabel.WEIGHT}
             name={FormField.WEIGHT}
             type="number"
+            step="0.1"
             unit={UnitType.WEIGHT}
           />
         </div>
@@ -360,6 +362,7 @@ const DxaReportForm = ({
             label={FormLabel.BMD}
             name={`${ResultType.LUMBAR}.${FormField.BMD}`}
             type="number"
+            step="0.001"
             unit={UnitType.BMD}
           />
         </div>
@@ -373,6 +376,7 @@ const DxaReportForm = ({
             label={FormLabel.T_SCORE}
             name={`${ResultType.LUMBAR}.${FormField.YOUNG_ADULT_T_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -392,6 +396,7 @@ const DxaReportForm = ({
             label={FormLabel.Z_SCORE}
             name={`${ResultType.LUMBAR}.${FormField.AGE_MATCHED_Z_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -421,6 +426,7 @@ const DxaReportForm = ({
             label={FormLabel.BMD}
             name={`${ResultType.RIGHT}.${FormField.BMD}`}
             type="number"
+            step="0.001"
             unit={UnitType.BMD}
           />
         </div>
@@ -434,6 +440,7 @@ const DxaReportForm = ({
             label={FormLabel.T_SCORE}
             name={`${ResultType.RIGHT}.${FormField.YOUNG_ADULT_T_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -453,6 +460,7 @@ const DxaReportForm = ({
             label={FormLabel.Z_SCORE}
             name={`${ResultType.RIGHT}.${FormField.AGE_MATCHED_Z_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -482,6 +490,7 @@ const DxaReportForm = ({
             label={FormLabel.BMD}
             name={`${ResultType.LEFT}.${FormField.BMD}`}
             type="number"
+            step="0.001"
             unit={UnitType.BMD}
           />
         </div>
@@ -495,6 +504,7 @@ const DxaReportForm = ({
             label={FormLabel.T_SCORE}
             name={`${ResultType.LEFT}.${FormField.YOUNG_ADULT_T_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -514,6 +524,7 @@ const DxaReportForm = ({
             label={FormLabel.Z_SCORE}
             name={`${ResultType.LEFT}.${FormField.AGE_MATCHED_Z_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -543,6 +554,7 @@ const DxaReportForm = ({
             label={FormLabel.BMD}
             name={`${ResultType.FOREARM}.${FormField.BMD}`}
             type="number"
+            step="0.001"
             unit={UnitType.BMD}
           />
         </div>
@@ -556,6 +568,7 @@ const DxaReportForm = ({
             label={FormLabel.T_SCORE}
             name={`${ResultType.FOREARM}.${FormField.YOUNG_ADULT_T_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -575,6 +588,7 @@ const DxaReportForm = ({
             label={FormLabel.Z_SCORE}
             name={`${ResultType.FOREARM}.${FormField.AGE_MATCHED_Z_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -596,6 +610,7 @@ const DxaReportForm = ({
             label={FormLabel.BMD}
             name={`${ResultType.TOTAL_BODY}.${FormField.BMD}`}
             type="number"
+            step="0.001"
             unit={UnitType.BMD}
           />
         </div>
@@ -609,6 +624,7 @@ const DxaReportForm = ({
             label={FormLabel.T_SCORE}
             name={`${ResultType.TOTAL_BODY}.${FormField.YOUNG_ADULT_T_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -628,6 +644,7 @@ const DxaReportForm = ({
             label={FormLabel.Z_SCORE}
             name={`${ResultType.TOTAL_BODY}.${FormField.AGE_MATCHED_Z_SCORE}`}
             type="number"
+            step="0.1"
           />
         </div>
         <div className="col">
@@ -669,6 +686,7 @@ const DxaReportForm = ({
             label={FormLabel.TOTAL_BODY_MASS}
             name={FormField.TOTAL_BODY_MASS}
             type="number"
+            step="0.1"
             unit={UnitType.WEIGHT}
           />
         </div>
@@ -684,6 +702,7 @@ const DxaReportForm = ({
             label={FormLabel.FAT}
             name={FormField.FAT}
             type="number"
+            step="0.1"
             unit={UnitType.WEIGHT}
           />
         </div>
@@ -692,6 +711,7 @@ const DxaReportForm = ({
             label={FormLabel.LEAN}
             name={FormField.LEAN}
             type="number"
+            step="0.1"
             unit={UnitType.WEIGHT}
           />
         </div>
@@ -700,6 +720,7 @@ const DxaReportForm = ({
             label={FormLabel.BONE_MINERAL}
             name={FormField.BONE_MINERAL}
             type="number"
+            step="0.1"
             unit={UnitType.WEIGHT}
           />
         </div>
@@ -754,6 +775,7 @@ const DxaReportForm = ({
             label={FormLabel.HIP_FRACTURE_RISK}
             name={FormField.HIP_FRACTURE_RISK}
             type="number"
+            step="0.1"
             unit={UnitType.PERCENT}
           />
         </div>
@@ -764,6 +786,7 @@ const DxaReportForm = ({
             label={FormLabel.MAJOR_BONE_FACTURE_RISK}
             name={FormField.MAJOR_BONE_FACTURE_RISK}
             type="number"
+            step="0.1"
             unit={UnitType.PERCENT}
           />
         </div>
