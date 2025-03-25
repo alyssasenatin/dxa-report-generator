@@ -106,13 +106,6 @@ const DxaReportForm = ({
     setValue(FormField.BMI_CLASSIFICATION, bmiClassification);
   }, [height, weight, setValue]);
 
-  // Set Right Site
-  useEffect(() => {
-    if (leftSite !== rightSite) {
-      setValue(`${ResultType.LEFT}.${FormField.LEFT_SITE}`, rightSite);
-    }
-  }, [left, leftSite, right, rightSite, setValue]);
-
   // Set Interpretation
   useEffect(() => {
     setValue(
@@ -130,6 +123,7 @@ const DxaReportForm = ({
     leftZPercent,
     leftZScore,
     leftBmd,
+    leftSite,
     leftTPercent,
     leftTScore,
     lumbar,
@@ -478,7 +472,6 @@ const DxaReportForm = ({
               label: value,
               value,
             }))}
-            disabled
             inline
           />
         </div>

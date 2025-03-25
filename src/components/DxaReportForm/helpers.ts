@@ -146,6 +146,7 @@ export const getInterpretationNoZScore = (
   {
     ageMatchedPercent: leftZPercent,
     bmd: leftBmd,
+    leftSite,
     youngAdultPercent: leftTPercent,
     youngAdultTScore: leftTScore,
   }: LeftTestResult,
@@ -183,7 +184,7 @@ and ${lumbarZPercent == 100 ? 'not' : `${100 - lumbarZPercent} %`} diminished wh
   }${
     leftBmd && rightBmd
       ? `
-The right and left ${rightSite === LeftRightSite.FEMORAL_NECK ? 'femoral neck' : 'total hip'} \
+The ${rightSite === leftSite ? `right and left ${rightSite}` : `right ${rightSite} and left ${leftSite}`} \
 BMDs of ${rightBmd} g/cm2 and ${leftBmd} g/cm2 (T-scores: ${rightTScore} right, ${leftTScore} left\
 ) respectively are \
 ${rightTPercent == 100 && leftTPercent == 100 ? 'not' : `${100 - rightTPercent} % and ${100 - leftTPercent} %`} \
