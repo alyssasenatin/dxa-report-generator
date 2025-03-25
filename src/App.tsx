@@ -23,7 +23,9 @@ const App = () => {
       [FormField.MENOPAUSAL_STATUS]: MenopausalStatus.PRE_MENOPAUSAL,
       [FormField.SEX]: Sex.MALE,
       [FormField.RACE]: Race.ASIAN,
-      [ResultType.LUMBAR]: {},
+      [ResultType.LUMBAR]: {
+        [FormField.LUMBAR_SITE]: ['L1', 'L2', 'L3', 'L4'],
+      },
       [ResultType.RIGHT]: {
         [FormField.RIGHT_SITE]: LeftRightSite.FEMORAL_NECK,
       },
